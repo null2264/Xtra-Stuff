@@ -1,9 +1,8 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        " S ",
-        " S ",
-        "   "
+        "S",
+        "S"
     ],
     "key": {
         "S": {
@@ -11,7 +10,6 @@
         }
     },
     "result": {
-        "item": "snad:snad",
-        "count": 2
+        "item": "snad:snad"
     }
 }

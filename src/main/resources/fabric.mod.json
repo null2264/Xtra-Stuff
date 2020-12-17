@@ -22,6 +22,9 @@
       "com.snad.Snad"
     ]
   },
+  "mixins": [
+    "snad.mixins.json"
+  ],
 
   "depends": {
     "fabricloader": ">=0.7.4",
