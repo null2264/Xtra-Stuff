@@ -14,11 +14,6 @@ import net.minecraft.block.SugarCaneBlock;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.tag.FluidTags;
-import net.minecraft.tag.RequiredTagList;
-import net.minecraft.tag.RequiredTagListRegistry;
-import net.minecraft.tag.Tag;
-import net.minecraft.tag.TagManager;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldView;
@@ -36,9 +31,9 @@ public class SugarCaneMixin extends Block {
             return true;
         } else {
             // if (blockState.isOf(Blocks.GRASS_BLOCK) || blockState.isOf(Blocks.DIRT) || blockState.isOf(Blocks.COARSE_DIRT) || blockState.isOf(Blocks.PODZOL) || blockState.isOf(Blocks.SAND) || blockState.isOf(Blocks.RED_SAND) || blockState.isOf(ModBlocks.SNAD)) {
-            if (blockState.isOf(Blocks.GRASS_BLOCK) || blockState.isOf(Blocks.DIRT) || blockState.isOf(Blocks.COARSE_DIRT) || blockState.isOf(Blocks.PODZOL) || blockState.isIn(BlockTags.SAND) || blockState.isOf(ModBlocks.SNAD)) {
+            if (blockState.isOf(Blocks.GRASS_BLOCK) || blockState.isOf(Blocks.DIRT) || blockState.isOf(Blocks.COARSE_DIRT) || blockState.isOf(Blocks.PODZOL) || blockState.isIn(BlockTags.SAND) || blockState.isIn(ModBlocks.TAG_SNAD)) {
                 BlockPos blockPos = pos.down();
-                Iterator var6 = Direction.Type.HORIZONTAL.iterator();
+                Iterator<Direction> var6 = Direction.Type.HORIZONTAL.iterator();
 
                 while(var6.hasNext()) {
                     Direction direction = (Direction)var6.next();

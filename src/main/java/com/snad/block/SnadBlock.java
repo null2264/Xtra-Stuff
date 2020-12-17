@@ -1,12 +1,15 @@
 package com.snad.block;
 
 import net.minecraft.block.FallingBlock;
+import net.minecraft.block.Material;
 import net.minecraft.block.SugarCaneBlock;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
 
 import java.util.Random;
 
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -14,9 +17,16 @@ import net.minecraft.block.CactusBlock;
 
 public class SnadBlock extends FallingBlock
 {
-    public SnadBlock(Settings settings)
+    public SnadBlock()
     {
-        super(settings);
+        super(
+            FabricBlockSettings
+            .of(Material.AGGREGATE)
+            .hardness(0.5f)
+            .ticksRandomly()
+            .sounds(BlockSoundGroup.SAND)
+        );
+        
     }
 
     @Override

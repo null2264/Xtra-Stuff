@@ -3,32 +3,36 @@ package com.snad;
 import com.snad.block.ModBlocks;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class Snad implements ModInitializer
 {
 
 	public static final String MOD_ID = "snad";
 
+	public static Identifier identifier(String name)
+	{
+		if (name.indexOf(':') >= 0)
+			return new Identifier(name);
+		return new Identifier(MOD_ID, name);
+	}
+
 	@Override
 	public void onInitialize()
 	{
-		Registry.register
-		(
-			Registry.BLOCK, 
-			new Identifier(MOD_ID, "snad"), ModBlocks.SNAD
-		);
+		ModBlocks.registerBlocks();
+		// Registry.register
+		// (
+		// 	Registry.BLOCK, 
+		// 	new Identifier(MOD_ID, "snad"), ModBlocks.SNAD
+		// );
 
-		Registry.register
-		(
-			Registry.ITEM,
-			new Identifier(MOD_ID, "snad"), 
-			new BlockItem(ModBlocks.SNAD, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS))
-		);
+		// Registry.register
+		// (
+		// 	Registry.ITEM,
+		// 	new Identifier(MOD_ID, "snad"), 
+		// 	new BlockItem(ModBlocks.SNAD, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS))
+		// );
 
 	}
 
