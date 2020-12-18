@@ -21,19 +21,6 @@ public class Snad implements ModInitializer
 	public void onInitialize()
 	{
 		ModBlocks.registerBlocks();
-		// Registry.register
-		// (
-		// 	Registry.BLOCK, 
-		// 	new Identifier(MOD_ID, "snad"), ModBlocks.SNAD
-		// );
-
-		// Registry.register
-		// (
-		// 	Registry.ITEM,
-		// 	new Identifier(MOD_ID, "snad"), 
-		// 	new BlockItem(ModBlocks.SNAD, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS))
-		// );
-
 	}
 
 }

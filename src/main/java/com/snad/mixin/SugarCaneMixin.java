@@ -14,8 +14,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.WorldView;
 
 @Mixin(SugarCaneBlock.class)
-public class SugarCaneMixin extends Block {
-    public SugarCaneMixin(Settings settings) {
+public class SugarCaneMixin extends Block
+{
+    public SugarCaneMixin(Settings settings)
+    {
         super(settings);
     }
     

@@ -35,14 +35,20 @@ public class SnadBlock extends FallingBlock
         return true;
     }
 
+    public boolean isPlant(Block block)
+    {
+        return (block instanceof SugarCaneBlock || block instanceof CactusBlock);
+    }
+
+
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random)
     {
         super.randomTick(state, world, pos, random);
 
         Block blockAbove = world.getBlockState(pos.up()).getBlock();
-
-        if (blockAbove instanceof SugarCaneBlock || blockAbove instanceof CactusBlock)
+        
+        if (isPlant(blockAbove))
         {
             boolean isSameBlockType = true;
             int height = 1;
