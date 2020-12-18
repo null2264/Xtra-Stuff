@@ -2,7 +2,6 @@ package com.snad.mixin;
 
 import java.util.Iterator;
 
-import com.snad.registry.ModBlocks;
 import com.snad.registry.ModTags;
 
 import org.spongepowered.asm.mixin.Mixin;
