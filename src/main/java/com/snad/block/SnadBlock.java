@@ -10,6 +10,8 @@ import net.minecraft.util.math.BlockPos;
 import java.util.Random;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.BambooBlock;
+import net.minecraft.block.BambooSaplingBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -26,7 +28,6 @@ public class SnadBlock extends FallingBlock
             .ticksRandomly()
             .sounds(BlockSoundGroup.SAND)
         );
-        
     }
 
     @Override
@@ -37,7 +38,7 @@ public class SnadBlock extends FallingBlock
 
     public boolean isPlant(Block block)
     {
-        return (block instanceof SugarCaneBlock || block instanceof CactusBlock);
+        return (block instanceof SugarCaneBlock || block instanceof CactusBlock || block instanceof BambooSaplingBlock || block instanceof BambooBlock);
     }
 
     @Override
@@ -76,5 +77,4 @@ public class SnadBlock extends FallingBlock
             }
         }
     }
-
 }
