@@ -2,7 +2,8 @@ package com.snad.mixin;
 
 import java.util.Iterator;
 
-import com.snad.block.ModBlocks;
+import com.snad.registry.ModBlocks;
+import com.snad.registry.ModTags;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -35,7 +36,7 @@ public class CactusMixin extends Block {
             if (!var4.hasNext()) {
                 BlockState blockState2 = world.getBlockState(pos.down());
                 System.out.println("test2");
-                return (blockState2.isOf(Blocks.CACTUS) || blockState2.isIn(BlockTags.SAND) || blockState2.isIn(ModBlocks.TAG_SNAD)) && !world.getBlockState(pos.up()).getMaterial().isLiquid();
+                return (blockState2.isOf(Blocks.CACTUS) || blockState2.isIn(BlockTags.SAND) || blockState2.isIn(ModTags.SNAD)) && !world.getBlockState(pos.up()).getMaterial().isLiquid();
             }
 
             direction = (Direction)var4.next();

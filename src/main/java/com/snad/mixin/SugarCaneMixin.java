@@ -2,7 +2,8 @@ package com.snad.mixin;
 
 import java.util.Iterator;
 
-import com.snad.block.ModBlocks;
+import com.snad.registry.ModBlocks;
+import com.snad.registry.ModTags;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -31,7 +32,7 @@ public class SugarCaneMixin extends Block {
             return true;
         } else {
             // if (blockState.isOf(Blocks.GRASS_BLOCK) || blockState.isOf(Blocks.DIRT) || blockState.isOf(Blocks.COARSE_DIRT) || blockState.isOf(Blocks.PODZOL) || blockState.isOf(Blocks.SAND) || blockState.isOf(Blocks.RED_SAND) || blockState.isOf(ModBlocks.SNAD)) {
-            if (blockState.isOf(Blocks.GRASS_BLOCK) || blockState.isOf(Blocks.DIRT) || blockState.isOf(Blocks.COARSE_DIRT) || blockState.isOf(Blocks.PODZOL) || blockState.isIn(BlockTags.SAND) || blockState.isIn(ModBlocks.TAG_SNAD)) {
+            if (blockState.isOf(Blocks.GRASS_BLOCK) || blockState.isOf(Blocks.DIRT) || blockState.isOf(Blocks.COARSE_DIRT) || blockState.isOf(Blocks.PODZOL) || blockState.isIn(BlockTags.SAND) || blockState.isIn(ModTags.SNAD)) {
                 BlockPos blockPos = pos.down();
                 Iterator<Direction> var6 = Direction.Type.HORIZONTAL.iterator();
 

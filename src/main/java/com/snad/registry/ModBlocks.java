@@ -1,10 +1,8 @@
-package com.snad.block;
+package com.snad.registry;
 
 import com.snad.Snad;
+import com.snad.block.SnadBlock;
 
-import net.minecraft.tag.Tag;
-import net.fabricmc.fabric.api.tag.TagRegistry;
-import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -16,7 +14,6 @@ public class ModBlocks
 	public static final SnadBlock SNAD = new SnadBlock();
 	public static final SnadBlock RED_SNAD = new SnadBlock();
 
-	public static final Tag<Block> TAG_SNAD = TagRegistry.block(Snad.identifier("snad"));
 	
 	public static void registerBlocks()
 	{

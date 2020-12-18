@@ -1,6 +1,6 @@
 package com.snad;
 
-import com.snad.block.ModBlocks;
+import com.snad.registry.ModBlocks;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
