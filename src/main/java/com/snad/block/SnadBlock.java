@@ -60,6 +60,7 @@ public class SnadBlock extends FallingBlock
                     Block nextPlantBlock = world.getBlockState(pos.up(height)).getBlock();
                     if (nextPlantBlock.getClass() == blockAbove.getClass())
                     {
+                        // TODO: Make growth speed configuration.
                         for (int growthAttempts = 0; growthAttempts < 2; growthAttempts++)
                         {
                             if (growthAttempts == 0 | nextPlantBlock.canPlaceAt(state, world, pos.up()))
