@@ -40,7 +40,6 @@ public class SnadBlock extends FallingBlock
         return (block instanceof SugarCaneBlock || block instanceof CactusBlock);
     }
 
-
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random)
     {
