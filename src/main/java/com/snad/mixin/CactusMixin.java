@@ -26,15 +26,14 @@ public class CactusMixin extends Block {
     
     @Overwrite
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        System.out.println("test");
         Iterator<Direction> var4 = Direction.Type.HORIZONTAL.iterator();
 
         Direction direction;
         Material material;
         do {
+            // TODO: Do not overwrite but modify the if statements
             if (!var4.hasNext()) {
                 BlockState blockState2 = world.getBlockState(pos.down());
-                System.out.println("test2");
                 return (blockState2.isOf(Blocks.CACTUS) || blockState2.isIn(BlockTags.SAND) || blockState2.isIn(ModTags.SNAD)) && !world.getBlockState(pos.up()).getMaterial().isLiquid();
             }
 

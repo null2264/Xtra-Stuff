@@ -30,7 +30,7 @@ public class SugarCaneMixin extends Block {
         if (blockState.getBlock() == this) {
             return true;
         } else {
-            // if (blockState.isOf(Blocks.GRASS_BLOCK) || blockState.isOf(Blocks.DIRT) || blockState.isOf(Blocks.COARSE_DIRT) || blockState.isOf(Blocks.PODZOL) || blockState.isOf(Blocks.SAND) || blockState.isOf(Blocks.RED_SAND) || blockState.isOf(ModBlocks.SNAD)) {
+            // TODO: Do not overwrite but modify the if statements
             if (blockState.isOf(Blocks.GRASS_BLOCK) || blockState.isOf(Blocks.DIRT) || blockState.isOf(Blocks.COARSE_DIRT) || blockState.isOf(Blocks.PODZOL) || blockState.isIn(BlockTags.SAND) || blockState.isIn(ModTags.SNAD)) {
                 BlockPos blockPos = pos.down();
                 Iterator<Direction> var6 = Direction.Type.HORIZONTAL.iterator();
