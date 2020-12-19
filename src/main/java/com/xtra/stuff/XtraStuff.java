@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 public class XtraStuff implements ModInitializer
 {
 
-	public static final String MOD_ID = "snad";
+	public static final String MOD_ID = "xtrastuff";
 
 	public static Identifier identifier(String name)
 	{

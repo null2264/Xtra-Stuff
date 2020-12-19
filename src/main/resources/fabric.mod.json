@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "snad",
+  "id": "xtrastuff",
   "version": "${version}",
 
-  "name": "Snad",
-  "description": "Bad Snad port for Fabric, a sand that makes sugarcane (and cactus) grow faster.",
+  "name": "Xtra Stuff",
+  "description": "Mod that adds extra stuff that maybe useful",
   "authors": [
     "null2264"
   ],
@@ -14,7 +14,7 @@
   },
 
   "license": "GPL-3.0-or-Later",
-  "icon": "assets/snad/icon.png",
+  "icon": "assets/xtra-stuff/icon.png",
 
   "environment": "*",
   "entrypoints": {
