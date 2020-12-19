@@ -1,6 +1,6 @@
-package com.snad.mixin;
+package com.xtra.stuff.mixin;
 
-import com.snad.registry.ModTags;
+import com.xtra.stuff.registry.ModTags;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
