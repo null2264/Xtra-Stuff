@@ -6,10 +6,10 @@
     ],
     "key": {
         "S": {
-            "item": "minecraft:red_sand"
+            "item": "minecraft:sand"
         }
     },
     "result": {
-        "item": "snad:red_snad"
+        "item": "xtrastuff:snad"
     }
 }
