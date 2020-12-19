@@ -1,6 +1,6 @@
-package com.snad.mixin;
+package com.xtra.stuff.mixin;
 
-import com.snad.registry.ModTags;
+import com.xtra.stuff.registry.ModTags;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -9,14 +9,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.SugarCaneBlock;
+import net.minecraft.block.CactusBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.WorldView;
 
-@Mixin(SugarCaneBlock.class)
-public class SugarCaneMixin extends Block
+@Mixin(CactusBlock.class)
+public class CactusMixin extends Block
 {
-    public SugarCaneMixin(Settings settings)
+    public CactusMixin(Settings settings)
     {
         super(settings);
     }

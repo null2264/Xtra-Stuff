@@ -1,4 +1,4 @@
-package com.snad.block;
+package com.xtra.stuff.block;
 
 import net.minecraft.block.FallingBlock;
 import net.minecraft.block.Material;

@@ -1,7 +1,7 @@
 {
     "required": true,
     "minVersion": "0.8",
-    "package": "com.snad.mixin",
+    "package": "com.xtra.stuff.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
     ],

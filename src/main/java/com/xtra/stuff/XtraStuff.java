@@ -1,11 +1,11 @@
-package com.snad;
+package com.xtra.stuff;
 
-import com.snad.registry.ModBlocks;
+import com.xtra.stuff.registry.ModBlocks;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 
-public class Snad implements ModInitializer
+public class XtraStuff implements ModInitializer
 {
 
 	public static final String MOD_ID = "snad";

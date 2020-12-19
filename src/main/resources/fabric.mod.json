@@ -19,11 +19,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.snad.Snad"
+      "com.xtra.stuff.XtraStuff"
     ]
   },
   "mixins": [
-    "snad.mixins.json"
+    "xtrastuff.mixins.json"
   ],
 
   "depends": {
