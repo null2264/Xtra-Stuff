@@ -1,5 +1,7 @@
 package com.xtra.stuff.block;
 
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
@@ -26,7 +28,13 @@ public class RedstoneClockBlock extends Block
     
     public RedstoneClockBlock()
     {
-        super(Settings.of(Material.STONE).strength(3.5f, 3.5f));
+        super
+        (
+            FabricBlockSettings
+            .of(Material.STONE)
+            .strength(3.5f, 3.5f)
+            .breakByTool(FabricToolTags.PICKAXES)
+        );
         this.setDefaultState(((BlockState)this.stateManager.getDefaultState()).with(LOCKED, false).with(POWERED, false));
     }
     
