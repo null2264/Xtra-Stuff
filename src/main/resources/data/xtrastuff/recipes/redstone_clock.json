@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SRS",
+        "RTR",
+        "SRS"
+    ],
+    "key": {
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "S": {
+            "item": "minecraft:stone"
+        },
+        "T": {
+            "item": "minecraft:restone_torch"
+        }
+    },
+    "result": {
+        "item": "xtrastuff:redstone_clock"
+    }
+}

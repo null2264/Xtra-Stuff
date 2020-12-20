@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "powered=true": { "model": "xtrastuff:block/redstone_clock_on" },
+        "powered=false": { "model": "xtrastuff:block/redstone_clock_off" }
+    }
+}
