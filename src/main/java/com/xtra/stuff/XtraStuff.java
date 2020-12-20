@@ -1,6 +1,7 @@
 package com.xtra.stuff;
 
 import com.xtra.stuff.registry.ModBlocks;
+import com.xtra.stuff.registry.ModItems;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -21,6 +22,7 @@ public class XtraStuff implements ModInitializer
 	public void onInitialize()
 	{
 		ModBlocks.registerBlocks();
+		ModItems.registerItem();
 	}
 
 }
