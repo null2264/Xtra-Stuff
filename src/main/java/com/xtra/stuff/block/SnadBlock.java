@@ -10,6 +10,7 @@ import net.minecraft.util.math.BlockPos;
 import java.util.Random;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.BambooBlock;
 import net.minecraft.block.BambooSaplingBlock;
 import net.minecraft.block.Block;
@@ -27,6 +28,7 @@ public class SnadBlock extends FallingBlock
             .hardness(0.5f)
             .ticksRandomly()
             .sounds(BlockSoundGroup.SAND)
+            .breakByTool(FabricToolTags.SHOVELS)
         );
     }
 
