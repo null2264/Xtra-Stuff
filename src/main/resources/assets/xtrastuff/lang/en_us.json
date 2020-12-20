@@ -1,4 +1,6 @@
 {
+    "block.xtrastuff.breaker_block": "Breaker Block",
+    "block.xtrastuff.detector_block": "Detector Block",
     "block.xtrastuff.red_snad": "Red Snad",
     "block.xtrastuff.redstone_clock": "Redstone Clock",
     "block.xtrastuff.snad": "Snad"

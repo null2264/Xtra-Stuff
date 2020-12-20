@@ -1,0 +1,7 @@
+{
+  "parent": "xtrastuff:block/detector_block_off",
+  "textures": {
+    "side": "xtrastuff:block/detector_block_side_on",
+    "south": "xtrastuff:block/detector_block_side_on"
+  }
+}

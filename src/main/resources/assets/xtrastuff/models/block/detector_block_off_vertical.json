@@ -1,0 +1,8 @@
+{
+  "parent": "block/orientable_vertical",
+  "textures": {
+    "front": "xtrastuff:block/detector_block_front",
+    "side": "xtrastuff:block/breaker_block_back",
+    "down": "xtrastuff:block/detector_block_side_off"
+  }
+}

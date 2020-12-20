@@ -3,7 +3,7 @@
     "textures": {
         "top": "xtrastuff:block/breaker_block_back",
         "front": "xtrastuff:block/breaker_block_front",
-        "back": "xtrastuff:block/breaker_block_back",
+        "south": "xtrastuff:block/breaker_block_back",
         "side": "xtrastuff:block/breaker_block_side"
     }
 }
