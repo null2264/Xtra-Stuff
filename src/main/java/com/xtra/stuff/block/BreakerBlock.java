@@ -46,6 +46,7 @@ public class BreakerBlock extends Block
             .of(Material.STONE)
             .strength(3.5f, 3.5f)
             .breakByTool(FabricToolTags.PICKAXES)
+            .breakByHand(false)
         );
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
     }

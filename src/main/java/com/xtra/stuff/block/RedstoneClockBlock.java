@@ -34,6 +34,7 @@ public class RedstoneClockBlock extends Block
             .of(Material.STONE)
             .strength(3.5f, 3.5f)
             .breakByTool(FabricToolTags.PICKAXES)
+            .breakByHand(false)
         );
         this.setDefaultState(((BlockState)this.stateManager.getDefaultState()).with(LOCKED, false).with(POWERED, false));
     }
