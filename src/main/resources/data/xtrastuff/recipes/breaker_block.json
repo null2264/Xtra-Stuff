@@ -1,22 +1,22 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "SRS",
-        "RTR",
+        "SSS",
+        "SPS",
         "SRS"
     ],
     "key": {
         "R": {
             "item": "minecraft:redstone"
         },
+        "P": {
+            "item": "minecraft:iron_pickaxe"
+        },
         "S": {
             "item": "minecraft:stone"
-        },
-        "T": {
-            "item": "minecraft:redstone_torch"
         }
     },
     "result": {
-        "item": "xtrastuff:redstone_clock"
+        "item": "xtrastuff:breaker_block"
     }
 }

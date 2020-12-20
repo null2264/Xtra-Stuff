@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "xtrastuff:block/breaker_block" },
+        "facing=south": { "model": "xtrastuff:block/breaker_block", "y": 180 },
+        "facing=west":  { "model": "xtrastuff:block/breaker_block", "y": 270 },
+        "facing=east":  { "model": "xtrastuff:block/breaker_block", "y": 90 }
+    }
+}
