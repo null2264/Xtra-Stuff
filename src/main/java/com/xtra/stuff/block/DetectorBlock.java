@@ -70,7 +70,10 @@ public class DetectorBlock extends Block
     
     public void scheduledTick(BlockState blockState_1, ServerWorld world_1, BlockPos blockPos_1, Random random_1)
     {
-        world_1.setBlockState(blockPos_1, blockState_1.with(POWERED, blockState_1.get(TRIGGER) && !blockState_1.get(LOCKED)));
+        if (!blockState_1.get(LOCKED))
+        {
+            world_1.setBlockState(blockPos_1, blockState_1.with(POWERED, blockState_1.get(TRIGGER)));
+        }
         world_1.getBlockTickScheduler().schedule(blockPos_1, this, 2);
     }
     
