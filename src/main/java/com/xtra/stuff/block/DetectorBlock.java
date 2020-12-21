@@ -24,6 +24,8 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
+import org.jetbrains.annotations.Nullable;
+
 public class DetectorBlock extends Block
 {
     public static final DirectionProperty FACING;
@@ -46,12 +48,6 @@ public class DetectorBlock extends Block
     public boolean emitsRedstonePower(BlockState blockState_1)
     {
         return true;
-    }
-    
-    @Override
-    public BlockState getPlacementState(ItemPlacementContext itemPlacementContext_1)
-    {
-        return this.getDefaultState().with(FACING, itemPlacementContext_1.getPlayerLookDirection().getOpposite());
     }
     
     @Override
@@ -78,14 +74,28 @@ public class DetectorBlock extends Block
         world_1.getBlockTickScheduler().schedule(blockPos_1, this, 2);
     }
     
-    public void neighborUpdate(BlockState blockState_1, World world_1, BlockPos blockPos_1, Block block_1, BlockPos blockPos_2, boolean boolean_1)
+    @Nullable
+    public BlockState getPlacementState(ItemPlacementContext ctx)
     {
-        BlockState facing_block = world_1.getBlockState(blockPos_1.offset(blockState_1.get(FACING)));
-        BlockState back_block = world_1.getBlockState(blockPos_1.offset(blockState_1.get(FACING).getOpposite()));
-        BlockState neighbor = world_1.getBlockState(blockPos_2);
+        BlockPos blockPos = ctx.getBlockPos();
+        if (blockPos.getY() < 255 && ctx.getWorld().getBlockState(blockPos.up()).canReplace(ctx)) {
+            World world = ctx.getWorld();
+            boolean bl = world.isReceivingRedstonePower(blockPos) || world.isReceivingRedstonePower(blockPos.up());
+            return ((BlockState)this.getDefaultState().with(TRIGGER, bl)).with(LOCKED, bl).with(FACING, ctx.getPlayerLookDirection().getOpposite());
+        } else {
+            return null;
+        }
+    }
+    
+    public void neighborUpdate(BlockState state, World world_1, BlockPos blockPos_1, Block block_1, BlockPos blockPos_2, boolean boolean_1)
+    {
+        BlockState facing_block = world_1.getBlockState(blockPos_1.offset(state.get(FACING)));
         
-        if(back_block != neighbor)
-            world_1.setBlockState(blockPos_1, blockState_1.with(TRIGGER, facing_block.getBlock() != Blocks.AIR).with(LOCKED, isReceivingRedstonePower(world_1, blockState_1, blockPos_1)));
+        world_1
+        .setBlockState(
+            blockPos_1, state.with(TRIGGER, facing_block.getBlock() != Blocks.AIR)
+            .with(LOCKED, isReceivingRedstonePower(world_1, state, blockPos_1))
+        );
     }
     
     public int getStrongRedstonePower(BlockState blockState_1, BlockView blockView_1, BlockPos blockPos_1, Direction direction_1)
