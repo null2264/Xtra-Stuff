@@ -75,15 +75,13 @@ public class CobblestoneGenerator extends Block
     
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block block, BlockPos pos2, boolean notify)
     {
-        if (block != Blocks.AIR)
+        Block block2 = world.getBlockState(pos2.up()).getBlock();
+        if (block2 == this);
         {
-            Block block2 = world.getBlockState(pos2.up()).getBlock();
-            if (block2 == this);
+            block = world.getBlockState(pos2).getBlock();
+            if (block == Blocks.HOPPER)
             {
-                if (block == Blocks.HOPPER)
-                {
-                    world.getBlockTickScheduler().schedule(pos, this, TICK_SPEED);
-                }
+                world.getBlockTickScheduler().schedule(pos, this, TICK_SPEED);
             }
         }
     }
