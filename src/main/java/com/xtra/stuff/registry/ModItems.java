@@ -17,5 +17,7 @@ public class ModItems
         Registry.register(Registry.ITEM, new Identifier(XtraStuff.MOD_ID, "redstone_clock"), new BlockItem(ModBlocks.REDSTONE_CLOCK, new Item.Settings().group(ItemGroup.REDSTONE)));
         Registry.register(Registry.ITEM, new Identifier(XtraStuff.MOD_ID, "detector_block"), new BlockItem(ModBlocks.DETECTOR_BLOCK, new Item.Settings().group(ItemGroup.REDSTONE)));
         Registry.register(Registry.ITEM, new Identifier(XtraStuff.MOD_ID, "breaker_block"), new BlockItem(ModBlocks.BREAKER_BLOCK, new Item.Settings().group(ItemGroup.REDSTONE)));
+        Registry.register(Registry.ITEM, new Identifier(XtraStuff.MOD_ID, "cobblestone_generator"), new BlockItem(ModBlocks.COBBLESTONE_GENERATOR, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+        Registry.register(Registry.ITEM, new Identifier(XtraStuff.MOD_ID, "polished_stone"), new BlockItem(ModBlocks.POLISHED_STONE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
     }
 }
