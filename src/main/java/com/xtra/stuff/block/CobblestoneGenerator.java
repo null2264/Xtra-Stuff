@@ -23,7 +23,7 @@ import net.minecraft.world.World;
 
 public class CobblestoneGenerator extends Block
 {
-    private int TICK_SPEED = 20;
+    public final int TICK_SPEED = 20;
 
     public CobblestoneGenerator()
     {

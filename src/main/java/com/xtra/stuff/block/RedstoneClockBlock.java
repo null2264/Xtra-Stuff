@@ -25,6 +25,8 @@ public class RedstoneClockBlock extends Block
 {
     public static final BooleanProperty POWERED;
     public static final BooleanProperty LOCKED;
+    public static final int POWER_TIME = 2;
+    public static final int TICK_TIME = 20;
     
     public RedstoneClockBlock()
     {
@@ -55,12 +57,12 @@ public class RedstoneClockBlock extends Block
     {
         if(!blockState_1.get(POWERED) && !blockState_1.get(LOCKED))
         {
-            world_1.getBlockTickScheduler().schedule(blockPos_1, this, 4);
+            world_1.getBlockTickScheduler().schedule(blockPos_1, this, POWER_TIME);
             world_1.setBlockState(blockPos_1, blockState_1.with(POWERED, true));
         }
         else
         {
-            world_1.getBlockTickScheduler().schedule(blockPos_1, this, 20);
+            world_1.getBlockTickScheduler().schedule(blockPos_1, this, TICK_TIME);
             world_1.setBlockState(blockPos_1, blockState_1.with(POWERED, false));
         }
     }
